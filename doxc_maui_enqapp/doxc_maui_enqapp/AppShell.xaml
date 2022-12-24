@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="doxc_maui_enqapp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:doxc_maui_enqapp"
+    xmlns:pages="clr-namespace:doxc_maui_enqapp.Pages"
+    xmlns:views ="clr-namespace:doxc_maui_enqapp.Views"
+    Shell.FlyoutBehavior="Flyout">
+    <Shell.FlyoutHeader>
+        <views:Flyoutheader/>
+    </Shell.FlyoutHeader>
+    <Shell.FlyoutFooter>
+        <views:FlyoutFooter />
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem Title="Home" FlyoutDisplayOptions="AsSingleItem">
+        <Tab Title="Home" Icon="dashboard.png">
+            <ShellContent
+            Title="Dashboard"
+            ContentTemplate="{DataTemplate local:MainPage}"                
+            Route="MainPage" />
+            <ShellContent Title="Enquries"                          
+             ContentTemplate="{DataTemplate local:MainPage}"/>
+        </Tab>
+        <ShellContent
+            Title="Leads"
+            Icon="search.png"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        <ShellContent
+            Title="Notification"
+            Icon="search.png"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Profile Management" FlyoutDisplayOptions="AsSingleItem">
+        <Tab>
+            <ShellContent
+            Title="Profile Management"
+            ContentTemplate="{DataTemplate pages:ProfileMgmt}"                
+            Route="ProfileMgmt" />
+        </Tab>
+    </FlyoutItem>
+
+</Shell>
