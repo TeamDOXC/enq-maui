@@ -1,4 +1,5 @@
 ﻿using doxc_maui_enqapp.Pages;
+using doxc_maui_enqapp.Services;
 using doxc_maui_enqapp.ViewModels;
 using EnqApp.OpenAPI;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,7 +20,18 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		builder.Services.AddSingleton<IEnqAppOpenAPIClient, EnqAppOpenAPIClient>();
+        HttpClient _client;
+#if DEBUG
+        HttpMessageHandler handler = new HttpsClientHandlerService().GetPlatformMessageHandler();
+        if (handler != null)
+            _client = new HttpClient(handler);
+        else
+            _client = new HttpClient();
+#else
+            _client = new HttpClient();
+#endif
+
+        builder.Services.AddSingleton<IEnqAppOpenAPIClient>(new EnqAppOpenAPIClient(_client));
 
 		builder.Services.AddTransient<MainPage>();
 		builder.Services.AddTransient<ProfileMgmt>();
