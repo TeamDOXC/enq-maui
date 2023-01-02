@@ -1,0 +1,60 @@
+{
+  "CompanyId": "634e98919f75100d5185529e",
+  "Id": {
+    "Timestamp": 1666095249,
+    "Machine": 10450192,
+    "Pid": 3409,
+    "Increment": 8737438,
+    "CreationTime": "2022-10-18T12:14:09Z"
+  },
+  "CreatedAt": "0001-01-01T00:00:00Z",
+  "Name": "Monalisa",
+  "Sector": "Complex",
+  "Industry": "Test",
+  "Sub_Industry": "Testing",
+  "IncorpatedDate": "2000-10-18T00:00:00Z",
+  "Website": "http://test123dgfhjk.com",
+  "NoOfEmployee": 1000,
+  "ContactPersonDetails": {
+    "First_Name": "Doxc",
+    "Last_name": "Doxc",
+    "Nickname": "doxcc",
+    "Date_of_birth": "2000-10-18T00:00:00Z",
+    "Source_ID": "Test",
+    "Time_zone": "(UTC) Coordinated Universal Time",
+    "Email": "test@gmail.com",
+    "Mobile_number": "9876543210",
+    "Gender": "Female",
+    "Title": "Mr",
+    "Address": {
+      "Address1": "Seethapathy 4th street",
+      "Address2": "No 113B/31",
+      "Address3": "Madhavaram , chennai , 60",
+      "portalAddress": {
+        "city": "Chennai",
+        "region": "South",
+        "postOfficeBoxNumber": "1000",
+        "postalcode": "600000",
+        "locality": "testing",
+        "landmark": "test",
+        "country": "Japan"
+      },
+      "AddressType": "Office"
+    }
+  },
+  "Address": {
+    "Address1": "Seethapathy 4th street",
+    "Address2": "No 113B/31",
+    "Address3": "Madhavaram , chennai , 60",
+    "portalAddress": {
+      "city": "Chennai",
+      "region": "South",
+      "postOfficeBoxNumber": "1000",
+      "postalcode": "600000",
+      "locality": "testing",
+      "landmark": "test",
+      "country": "Japan"
+    },
+    "AddressType": "Office"
+  }
+}

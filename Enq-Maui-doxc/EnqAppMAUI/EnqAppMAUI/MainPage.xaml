@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnqAppMAUI.MainPage"
+             xmlns:vm="clr-namespace:EnqAppMAUI.ViewModels"
+             x:DataType="vm:MainViewModel"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+
+            <Label
+                Text="Welcome to DOXC Enquiry APP"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to DOXC Enquiry APP..s"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="MockAuthBtn"
+                Text="Mock Login Action"
+                Command="{Binding SignInCommand}"
+                SemanticProperties.Hint="Mock your auth operations"
+                Clicked="OnAuthBtnClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

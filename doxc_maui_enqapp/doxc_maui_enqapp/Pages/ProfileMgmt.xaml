@@ -3,15 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
              x:Class="doxc_maui_enqapp.Pages.ProfileMgmt"
+             xmlns:dxcontrls="clr-namespace:doxc.maui.controls;assembly=doxc.maui.controls"
              xmlns:model="clr-namespace:doxc_maui_enqapp.ViewModels"
              Title="ProfileMgmt">
-    <VerticalStackLayout>
-        <Label 
-            Text="{Binding ProfileModel.CompanyProfile.Name}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Entry Text="{Binding ProfileModel.CompanyProfile.Name}" android:Entry.ImeOptions="Send" 
+    <VerticalStackLayout Spacing="10">
+
+            <Label Text="Company Profile"/>
+        <Label Text="Company Name"/>
+        <dxcontrls:dxcEntry Text="{Binding CompanyProfile.ProfileId}"  
                Placeholder="Company Name" 
-       ClearButtonVisibility="WhileEditing" />      
+       ClearButtonVisibility="WhileEditing" />
+        <dxcontrls:dxcEntry Text="{Binding CompanyProfile.Sector}"  
+               Placeholder="Sector" 
+       ClearButtonVisibility="WhileEditing" />
+
+        <dxcontrls:dxcEntry Text="{Binding CompanyProfile.Industry}"  
+               Placeholder="Industry" 
+       ClearButtonVisibility="WhileEditing" />
+
+        <dxcontrls:dxcEntry Text="{Binding CompanyProfile.EmployeeCount}"  
+               Placeholder="No of Employees" 
+       ClearButtonVisibility="WhileEditing" />
+            <dxcontrls:dxcEntry Text="{Binding CompanyProfile.SubIndustry}"  
+               Placeholder="Sub Industry" 
+       ClearButtonVisibility="WhileEditing" />
+            <dxcontrls:dxcEntry Text="{Binding CompanyProfile.Website}"  
+               Placeholder="Website" 
+       ClearButtonVisibility="WhileEditing" />
+
+        <!--<dxcontrls:dxcEntry Text="{Binding CompanyProfile.Address.Address1}"  
+               Placeholder="Address 1" 
+       ClearButtonVisibility="WhileEditing" />-->
     </VerticalStackLayout>
 </ContentPage>

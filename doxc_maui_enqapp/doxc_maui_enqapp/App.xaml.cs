@@ -1,4 +1,6 @@
-﻿namespace doxc_maui_enqapp;
+﻿using doxc_maui_enqapp.Pages;
+
+namespace doxc_maui_enqapp;
 
 public partial class App : Application
 {

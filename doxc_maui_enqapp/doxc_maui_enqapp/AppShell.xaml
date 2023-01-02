@@ -19,7 +19,8 @@
             <ShellContent
             Title="Dashboard"
             ContentTemplate="{DataTemplate local:MainPage}"                
-            Route="MainPage" />
+            />
+            
             <ShellContent Title="Enquries"                          
              ContentTemplate="{DataTemplate local:MainPage}"/>
         </Tab>
@@ -27,19 +28,18 @@
             Title="Leads"
             Icon="search.png"
             ContentTemplate="{DataTemplate local:MainPage}"
-            Route="MainPage" />
+            />
         <ShellContent
             Title="Notification"
             Icon="search.png"
             ContentTemplate="{DataTemplate local:MainPage}"
-            Route="MainPage" />
+            />
     </FlyoutItem>
     <FlyoutItem Title="Profile Management" FlyoutDisplayOptions="AsSingleItem">
         <Tab>
             <ShellContent
             Title="Profile Management"
-            ContentTemplate="{DataTemplate pages:ProfileMgmt}"                
-            Route="ProfileMgmt" />
+            ContentTemplate="{DataTemplate pages:ProfileMgmt}" Route="ProfileMgmt?ProfileId=test"/>
         </Tab>
     </FlyoutItem>
 

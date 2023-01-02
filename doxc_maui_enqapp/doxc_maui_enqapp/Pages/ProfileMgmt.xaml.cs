@@ -1,18 +1,32 @@
 using doxc_maui_enqapp.ViewModels;
-using EnqApp.OpenAPI;
 
 namespace doxc_maui_enqapp.Pages;
 
 public partial class ProfileMgmt : ContentPage
 {
-    private CompanyProfileViewModel _viewModel;
+    CompanyProfileViewModel _viewModel;
+    private IEnqAppOpenAPIClient _enqAppOpenAPIClient;
 
-    public ProfileMgmt(IEnqAppOpenAPIClient enqAppOpenAPIClient)
-	{
+    public CompanyProfileViewModel CompanyProfile => _viewModel;
+
+    //   public ProfileMgmt(IEnqAppOpenAPIClient enqAppOpenAPIClient)
+    //{
+    //       InitializeComponent();
+    //       _enqAppOpenAPIClient = enqAppOpenAPIClient;
+    //       BindingContext = this;
+    //   }
+
+
+    //   protected async override void OnBindingContextChanged()
+    //   {
+    //       _viewModel = new CompanyProfileViewModel(_enqAppOpenAPIClient);
+    //       await _viewModel.GetCompanyProfileAsync("");
+    //       base.OnBindingContextChanged();
+    //   }
+
+    public ProfileMgmt(CompanyProfileViewModel companyProfileViewModel)
+    {
+        BindingContext = companyProfileViewModel;
         InitializeComponent();
-        _viewModel = new CompanyProfileViewModel(enqAppOpenAPIClient);
-        BindingContext = this;
     }
-
-    public CompanyProfileViewModel  ProfileModel { get => _viewModel; set => _viewModel = value; }
 }

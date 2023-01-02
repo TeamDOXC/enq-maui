@@ -1,6 +1,4 @@
-﻿using EnqApp.OpenAPI;
-
-namespace doxc_maui_enqapp;
+﻿namespace doxc_maui_enqapp;
 
 public partial class MainPage : ContentPage
 {
@@ -16,12 +14,12 @@ public partial class MainPage : ContentPage
 	{
 		count++;
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+		//if (count == 1)
+		//	CounterBtn.Text = $"Clicked {count} time";
+		//else
+		//	CounterBtn.Text = $"Clicked {count} times";
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		//SemanticScreenReader.Announce(CounterBtn.Text);
 	}
 }
 
